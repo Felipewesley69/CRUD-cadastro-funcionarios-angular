@@ -1,0 +1,55 @@
+<mat-card>
+  <mat-card-title>
+
+  </mat-card-title>
+  <table class="table table-hover" *ngIf="listaFuncionarios; else loading">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Matrícula</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Setor</th>
+        <th scope="col">Salário</th>
+        <th scope="col">Contato</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let funcionario of listaFuncionarios">
+        <th scope="row">{{ funcionario.id }}</th>
+        <td>{{ funcionario.matricula}}</td>
+        <td>{{funcionario.nome}}</td>
+        <td>{{funcionario.setor}}</td>
+        <td>{{funcionario.salario | currency: 'BRL'}}</td>
+        <td>{{funcionario.contato | phone}}</td>
+        <td>
+          <a [routerLink]="['/cadastro/editar-cadastro/', funcionario.id]">
+            <button class="edit" mat-mini-fab>
+              <mat-icon>
+                edit
+              </mat-icon>
+            </button>
+          </a>
+          <a [routerLink]="['/cadastro/deletar-cadastro/', funcionario.id]">
+            <button class="delete" mat-mini-fab>
+              <mat-icon>
+                delete
+              </mat-icon>
+            </button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </ng-template>
+  <ng-container *ngIf="!listaFuncionarios.length">
+    <p class="semDados">
+      Sem dados para serem exibidos...
+      <span class="material-icons">
+        error
+      </span>
+    </p>
+  </ng-container>
+</mat-card>

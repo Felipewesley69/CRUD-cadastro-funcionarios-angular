@@ -1,0 +1,33 @@
+<mat-sidenav-container>
+  <mat-sidenav class="side-nav" mode="side" opened fixedInViewport="true" fixedTopGap="0">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item [routerLink]="['/']">
+        <i class="material-icons">
+          home
+        </i>
+        Início
+      </a>
+      <a mat-list-item [routerLink]="['/cadastro']">
+        <i class="material-icons">
+          perm_identity
+        </i>
+        Funcionários
+      </a>
+
+
+      <a mat-list-item [routerLink]="['/cadastro/novo-cadastro']">
+        <i class="material-icons">
+          add
+        </i>
+        Novo Funcionário
+      </a>
+
+
+
+    </mat-nav-list>
+    <app-footer></app-footer>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

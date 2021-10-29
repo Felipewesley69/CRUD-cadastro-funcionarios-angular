@@ -1,0 +1,20 @@
+{
+  "funcionarios": [
+    {
+      "matricula": 1234,
+      "nome": "Felipe wesley lemos da silva",
+      "setor": "T.I",
+      "salario": 3200,
+      "contato": "85988585640",
+      "id": 1
+    }
+  ],
+  "setores": [
+    "Administrativo",
+    "Financeiro",
+    "Recursos Humanos",
+    "Setor Comercial",
+    "Setor Operacional",
+    "T.I"
+  ]
+}

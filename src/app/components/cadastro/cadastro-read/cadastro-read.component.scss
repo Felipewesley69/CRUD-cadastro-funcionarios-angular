@@ -1,0 +1,35 @@
+mat-card {
+  margin-top: 20px;
+}
+
+.table {
+
+  td,
+  th {
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .edit {
+    margin-right: 15px;
+    background-color: #32CD32;
+  }
+
+  .delete {
+    background-color: #B22222;
+  }
+}
+
+.semDados {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0 15px 0;
+  flex-direction: column;
+
+  span {
+    font-size: 3rem;
+    margin-top: 15px;
+  }
+}
